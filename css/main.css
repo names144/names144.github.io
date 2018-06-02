@@ -101,6 +101,28 @@ textarea {
   padding: 0;
 }
 
+.jumbotron {
+  margin-bottom: 0;
+}
+
+/* Header */
+#header {
+  background-color: #343a40;
+}
+
+#about {
+  background-color: #343a40;
+}
+
+/* Navbar */
+.nav-top {
+  background-color: transparent !important;
+}
+
+.nav-fixed {
+  background-color: rgba(34, 34, 34, 0.95) !important;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
