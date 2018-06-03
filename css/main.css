@@ -108,19 +108,60 @@ textarea {
 /* Header */
 #header {
   background-color: #343a40;
+  color: #fff;
 }
 
-#about {
-  background-color: #343a40;
+#header h1 {
+  color: #fff;
+}
+
+#header a {
+  color: rgba(255,255,255,0.5);
+}
+
+#header a:hover {
+  color: #fff;
 }
 
 /* Navbar */
+.navbar {
+  padding: 1rem;
+}
+
+.navbar a {
+  cursor: pointer;
+}
+
 .nav-top {
   background-color: transparent !important;
+  transition: background .25s ease-in-out;
 }
 
 .nav-fixed {
   background-color: rgba(34, 34, 34, 0.95) !important;
+  transition: background .25s ease-in-out;
+}
+
+/* Content */
+#content > div:nth-child(even) {
+  background-color: #343a40;
+  color: #fff;
+}
+
+#content > div:nth-child(odd) {
+  background-color: #fff;
+  color: #919aa1;
+}
+
+/* About */
+#about > header {
+  color: #4BBF73;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+#about > header > span {
+  border-bottom: 0.2rem solid #4BBF73;
 }
 
 /* ==========================================================================

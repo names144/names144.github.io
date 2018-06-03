@@ -21,52 +21,74 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark nav-top">
-    <a class="navbar-brand" href="#"><span style="color: #4BBF73;">N</span>AMES</a>
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark nav-top" role="navigation">
+    <a class="navbar-brand" href="#home"><span style="color: #4BBF73;">N</span>AMES</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#career">Career</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
         </li>
       </ul>
     </div>
-  </nav>
-  <div class="container-fluid">
+  </nav><!-- End Navbar -->
+
+  <div id="home" class="container-fluid">
     <!-- Header -->
     <div id="header" class="jumbotron d-flex justify-content-center">
       <div class="text-center">
-        <img src="https://avatars1.githubusercontent.com/u/1704731?s=460&v=4" height="150px" width="150px" class="img-thumbnail rounded-circle">
+        <img src="https://avatars1.githubusercontent.com/u/1704731?s=460&v=4" height="150px" width="150px" class="img-thumbnail rounded-circle mb-3">
         <h1>Nicholas Ames</h1>
         <p class="lead">Software Development Engineer</p>
         <div>
-          <a href="">https://www.linkedin.com/in/names144/</a>
+          <a href="https://www.linkedin.com/in/names144/">https://www.linkedin.com/in/names144/</a>
         </div>
       </div>
     </div> <!-- End Header -->
+
     <!-- Main Content -->
-    <div class="container-fluid">
+    <div id="content" class="container-fluid">
+
       <!-- About Section -->
       <div id="about" class="jumbotron">
-        About
+        <header class="mb-5 text-uppercase">
+          <span>About Me</span>
+        </header>
+        <p>
+          Hello, I'm Nick, a software development engineer living and working in the Pacific Northwest.
+        </p>
       </div> <!-- End About -->
+
       <!-- Career -->
-      <div class="jumbotron">
+      <div id="career" class="jumbotron">
         Career
-      </div>
+      </div> <!-- End Career -->
+
       <!-- Projects -->
-      <div class="jumbotron">
+      <div id="projects" class="jumbotron">
         Projects
+      </div><!-- End Projects -->
+
+      <!-- Footer -->
+      <div id="footer" class="jumbotron text-center">
+        &copy; 2018. All Rights Reserved. Designed &amp; Developed by Nicholas Ames
       </div>
     </div>
+
   </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   <script src="js/plugins.js"></script>
