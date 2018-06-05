@@ -36,7 +36,10 @@
           <a class="nav-link" href="#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#career">Career</a>
+          <a class="nav-link" href="#employment">Employment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#education">Education</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#projects">Projects</a>
@@ -48,7 +51,7 @@
   <div id="home" class="container-fluid">
     <!-- Header -->
     <div id="header" class="jumbotron d-flex justify-content-center">
-      <div class="text-center">
+      <div class="header-content text-center">
         <img src="https://avatars1.githubusercontent.com/u/1704731?s=460&v=4" height="150px" width="150px" class="img-thumbnail rounded-circle mb-3">
         <h1>Nicholas Ames</h1>
         <p class="lead">Software Development Engineer</p>
@@ -68,13 +71,75 @@
         </header>
         <p>
           Hello, I'm Nick, a software development engineer living and working in the Pacific Northwest.
+
+          I enjoy creating web applications, finding creative ways to parse the internet and learning new tools and technologies to help aid me in my day-to-day tasks.
         </p>
       </div> <!-- End About -->
 
-      <!-- Career -->
-      <div id="career" class="jumbotron">
-        Career
-      </div> <!-- End Career -->
+      <!-- Employment -->
+      <div id="employment" class="jumbotron">
+        <h1 class="text-center mb-5">Employment</h1>
+        <div class="container mt-4">
+          <div class="row">
+            <div class="col">
+              <div class="career-timeline-item" data-date="2016 - Present">
+                <h3>Senior Software Development Engineer</h3>
+                <p class="company-name">WatchGuard Technologies - Seattle, WA</p>
+                <p>Developing a cloud platform that will allow for multi-tier/multi-tenant management of tenants and licensed products.</p>
+                <ul>
+                  <li>Building unified application in Angular for allowing users to view, manage,and interact with various WatchGuard applications.</li>
+                  <li>Created charts and visualizations used throughout the application with D3.</li>
+                  <li>Built a complete calendar component using Angular that allows users to choose both dates and times, utilizing MomentJS.</li>
+                  <li>Created abstract libraries in Python for database interactions and REST API interactions.</li>
+                </ul>
+              </div>
+              <div class="career-timeline-item" data-date="2015 - 2016">
+                <h3>Software Development Engineer</h3>
+                <p class="company-name">PitchBook Data - Seattle, WA</p>
+                <p>Developed and maintained various internal tools and applications. Specific examples include quality assurance tools, data management systems and automated researching solutions.</p>
+                <ul>
+                  <li>Increased speed and efficiency of web crawling/scraping process substantially through utilizing multi-processing techniques in Python.</li>
+                  <li>Designed and constructed an internal web application that allowed research managers to quickly monitor data entry for errors.</li>
+                  <li>Constructed public-facing web pages for specific company profiles in the PitchBook platform. Utilizing DynamoDB, NodeJS/ExpressJS, and HandlebarsJS.</li>
+                  <li>Managing and maintaining multiple cloud-based processes through Amazon Web Services, including EC2-instances, SQS queues, RDS Databases, etc.</li>
+                </ul>
+              </div>
+              <div class="career-timeline-item" data-date="2014 - 2015">
+                <h3>Software Development Engineer, Internship</h3>
+                <p class="company-name">Pierce County IT - Tacoma, WA</p>
+                <p>Developed a mobile application under the guidance of a senior software engineer. Utilized web technologies such as AngularJS and cross-platform build tools such as Cordova to design and create a mobile application for IOS and Android.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End Employment -->
+
+      <!-- Education -->
+      <div id="education" class="jumbotron">
+        <h1 class="text-center mb-5">Education</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <div class="card-title">BSc, Computer Science</div>
+                  <div>University of Washington, Tacoma</div>
+                  <div>2013 - 2015</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <div class="card-title">BSc, Sport &amp; Exercise Science</div>
+                  <div>Seattle University</div>
+                  <div>2013 - 2015</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- End Education -->
 
       <!-- Projects -->
       <div id="projects" class="jumbotron">
