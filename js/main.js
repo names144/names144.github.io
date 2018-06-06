@@ -2,6 +2,7 @@
 
 var $nav = $('nav');
 var $window = $(window);
+var $scrollTopIcon = $('#scrollTop');
 var navLinks = [];
 
 // Bootstrap scrollspy for updating nav active
@@ -10,17 +11,22 @@ $('body').scrollspy({
     offset: 80
 });
 
+// If not starting at top, set bg color
+if ($window.scrollTop() !== 0) {
+    $nav.removeClass('nav-top');
+    $nav.addClass('nav-fixed');
+    $scrollTopIcon.removeClass('hide-top-icon');
+}
+
 var onScroll = function (event) {
     if ($window.scrollTop() === 0) {
         $nav.addClass('nav-top');
         $nav.removeClass('nav-fixed');
+        $scrollTopIcon.addClass('hide-top-icon');
     } else {
-        if ($nav.hasClass('nav-top')) {
-            $nav.removeClass('nav-top');
-        }
-        if (!$nav.hasClass('nav-fixed')) {
-            $nav.addClass('nav-fixed');
-        }
+        $scrollTopIcon.removeClass('hide-top-icon');
+        $nav.removeClass('nav-top');
+        $nav.addClass('nav-fixed');
     }
 
     // Check which nav link to set active
@@ -45,4 +51,10 @@ $('.navbar a').each(function() {
             scrollTop: scrollTop
         }, 500);
     });
+});
+
+// Click event for the top icon
+$scrollTopIcon.click(function(event) {
+    event.preventDefault();
+    $('html, body').animate({scrollTop: '0px'});
 });
