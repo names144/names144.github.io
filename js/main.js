@@ -53,25 +53,4 @@
       event.preventDefault();
       $('html, body').animate({scrollTop: '0px'});
   });
-
-  function updateActiveTab(tabId) {
-    $('.tabs a').each(function(idx, tab) {
-      var $tab = $(tab);
-      var $tabContainer = $('#' + tabId);
-      if ($tab.attr('data-tab') === tabId) {
-        $tab.addClass('active');
-        $tabContainer.removeClass('d-none');
-      } else {
-        $tab.removeClass('active');
-        $('#' + $tab.attr('data-tab')).addClass('d-none');
-      }
-    });
-  }
-
-  // Setup skills tabs
-  $('.tabs a').each(function(idx, tab) {
-    $(tab).click(function(event) {
-      updateActiveTab($(tab).attr('data-tab'));
-    });
-  });
 })();
