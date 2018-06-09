@@ -157,6 +157,14 @@ textarea {
   .navbar {
     background-color: rgba(34, 34, 34, 0.95) !important;
   }
+
+  html.no-js nav {
+    position: static
+  }
+
+  html.no-js .navbar-collapse {
+    display: block;
+  }
 }
 
 .scroll-top-icon {

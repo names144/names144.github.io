@@ -9,14 +9,18 @@
     offset: 80
   });
 
-  // If not starting at top, set bg color
-  if ($window.scrollTop() !== 0) {
-    $nav.removeClass('nav-top');
+  // If at top, set bg color
+  if ($window.scrollTop() === 0) {
+    $nav.removeClass('nav-fixed');
+    $nav.addClass('nav-top');
+    $scrollTopIcon.addClass('hide-top-icon');
+  } else {
     $nav.addClass('nav-fixed');
+    $nav.removeClass('nav-top');
     $scrollTopIcon.removeClass('hide-top-icon');
   }
 
-  var onScroll = function (event) {
+  var onScroll = function () {
     if ($window.scrollTop() === 0) {
       $nav.addClass('nav-top');
       $nav.removeClass('nav-fixed');
