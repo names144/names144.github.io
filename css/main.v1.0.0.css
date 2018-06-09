@@ -311,6 +311,13 @@ textarea {
   color: #4BBF73;
 }
 
+#projects .card-body .card-body {
+  overflow: hidden;
+  transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
 /* Skills */
 #skills .badge {
   font-size: 1rem;
