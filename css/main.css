@@ -311,6 +311,40 @@ textarea {
   color: #4BBF73;
 }
 
+/* Skills */
+#skills .tabs a {
+  cursor: pointer;
+}
+
+#skills .tabs a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#skills .tabs a.active:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+#skills .tabs a.active {
+  cursor: pointer;
+  color: #fff;
+}
+
+#skills .tabs .nav-item {
+  margin-right: 0;
+}
+
+#skills .badge {
+  font-size: 1rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#skills .badge:nth-child(even) {
+  background-color: #4BBF73;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
