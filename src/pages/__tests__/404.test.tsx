@@ -1,14 +1,12 @@
 import * as React from 'react';
 import renderer from 'react-test-renderer';
 
-import Seo from '../Seo';
+import NotFoundPage from '../404';
 
-jest.mock('react-helmet', () => (props: any) => <mock-react-helmet {...props} />);
-
-describe('Seo', () => {
+describe('NotFoundPage', () => {
   test('Should render', () => {
     const tree = renderer
-      .create(<Seo title="Test" />)
+      .create(<NotFoundPage />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

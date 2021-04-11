@@ -10,6 +10,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:react-hooks/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -40,7 +41,12 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/*.test.ts', '**/*.test.tsx'],
+      files: [
+        '**/*.test.ts',
+        '**/*.test.tsx',
+        '**/__mocks__/*.ts', 
+        '**/__mocks__/*.tsx',
+      ],
       rules: {
         'react/display-name': 'off',
         '@typescript-eslint/no-explicit-any': 'off',

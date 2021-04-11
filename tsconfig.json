@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "rootDir": "./src",
+    "baseUrl": "./src",
     "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",

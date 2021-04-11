@@ -1,6 +1,8 @@
 import * as React from 'react';
 
-import Seo from '../components/Seo';
+import Seo from 'components/Seo';
+
+jest.mock('components/Seo');
 
 const NotFoundPage = (): JSX.Element => (
   <div>

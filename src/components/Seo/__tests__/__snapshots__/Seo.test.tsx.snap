@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Seo renders correctly 1`] = `
+exports[`Seo Should render 1`] = `
 <mock-react-helmet
   defaultTitle="Nicholas Ames -- Software Engineer"
   title="Test"

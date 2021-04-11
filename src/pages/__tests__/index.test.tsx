@@ -1,14 +1,14 @@
 import * as React from 'react';
 import renderer from 'react-test-renderer';
 
-import Seo from '../Seo';
+import Index from '../index';
 
-jest.mock('react-helmet', () => (props: any) => <mock-react-helmet {...props} />);
+jest.mock('components/Seo');
 
-describe('Seo', () => {
+describe('Index', () => {
   test('Should render', () => {
     const tree = renderer
-      .create(<Seo title="Test" />)
+      .create(<Index />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
