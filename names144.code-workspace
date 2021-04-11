@@ -3,14 +3,5 @@
 		{
 			"path": "./"
 		}
-	],
-	"settings": {
-		"editor.tabSize": 2,
-		"files.insertFinalNewline": true,
-		"files.trimFinalNewlines": true,
-		"eslint.format.enable": true,
-		"editor.codeActionsOnSave": {
-			"source.fixAll": true
-		}
-	}
+	]
 }
