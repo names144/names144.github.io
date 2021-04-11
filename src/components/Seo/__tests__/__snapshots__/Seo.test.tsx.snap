@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Seo renders correctly 1`] = `
+<mock-react-helmet
+  defaultTitle="Nicholas Ames -- Software Engineer"
+  title="Test"
+  titleTemplate="Nicholas Ames -- %s"
+>
+  <html
+    lang="en"
+  />
+  <meta
+    charSet="utf-8"
+  />
+  <meta
+    content="ie=edge"
+    httpEquiv="x-ua-compatible"
+  />
+  <meta
+    content="Personal site for Nicholas Ames, Software Engineer."
+    name="description"
+  />
+  <meta
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    name="viewport"
+  />
+</mock-react-helmet>
+`;
