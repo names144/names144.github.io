@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply tw-font-sans tw-text-white tw-text-base tw-mx-2 tw-my-2;
+  background-color: #343a40;
+}
+
+/**
+ * Container
+ */
+.container {
+  @apply md:tw-container md:tw-mx-auto;
+}
+
+.container-fluid {
+  @apply md:tw-container;
+}

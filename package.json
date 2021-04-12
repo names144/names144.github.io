@@ -50,7 +50,7 @@
     "lint:ts": "tsc --noEmit",
     "lint:eslint": "eslint --ext ts,tsx,js,jsx src/",
     "lint": "yarn lint:eslint && yarn lint:ts",
-    "start": "npm run develop",
+    "start": "yarn develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "jest"

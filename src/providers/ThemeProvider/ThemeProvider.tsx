@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { CreateUseEffect } from 'types/common';
+import { CreateUseEffect } from 'types';
 import { getItem, setItem } from 'utils/storage';
 
 export enum Themes {

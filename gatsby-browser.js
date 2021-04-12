@@ -6,7 +6,7 @@
 import * as React from 'react';
 import './src/styles/global.css';
 
-import ThemeProvider from './src/providers/ThemeProvider';
+import { ThemeProvider } from './src/providers';
 
 // eslint-disable-next-line
 export const wrapRootElement = ({ element }) => (

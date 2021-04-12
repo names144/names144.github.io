@@ -1,11 +1,15 @@
 import * as React from 'react';
-import Seo from 'components/Seo';
+
+import {
+  Seo,
+  Header,
+} from 'components';
 
 const IndexPage = (): JSX.Element => (
   <>
     <Seo />
-    <div className="md:container md:mx-auto">
-      <span className="text-xl">TODO</span>
+    <div className="container-fluid">
+      <Header />
     </div>
   </>
 );
