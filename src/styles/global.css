@@ -17,3 +17,7 @@ body {
 .container-fluid {
   @apply md:tw-container;
 }
+
+.primary-green-text {
+  @apply tw-text-green-500;
+}

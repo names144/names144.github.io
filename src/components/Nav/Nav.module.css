@@ -1,0 +1,7 @@
+.nav-link {
+  @apply tw-text-gray-400 hover:tw-text-white tw-pl-6;
+}
+
+.active-link {
+  @apply tw-text-white;
+}

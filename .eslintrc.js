@@ -35,9 +35,13 @@ module.exports = {
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
     'comma-dangle': ['error', 'always-multiline'],
+    'object-curly-spacing': ['error', 'always'],
 
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-explicit-any': 'error',
+
+    'react/jsx-first-prop-new-line': [2, 'multiline'],
+    'react/jsx-max-props-per-line': [2, { when: 'always' }],
   },
   overrides: [
     {

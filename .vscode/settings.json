@@ -6,5 +6,8 @@
   "eslint.format.enable": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": true
-  }
+  },
+  "typescript.tsserver.pluginPaths": [
+    "typescript-plugin-css-modules"
+  ]
 }

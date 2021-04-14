@@ -1,7 +1,7 @@
 import * as React from 'react';
 import renderer from 'react-test-renderer';
 
-import {getItem as getItemMock, setItem as setItemMock} from 'utils/storage';
+import { getItem as getItemMock, setItem as setItemMock } from 'utils/storage';
 
 import ThemeProvider, { useTheme, Themes } from '../ThemeProvider';
 

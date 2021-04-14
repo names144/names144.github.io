@@ -1,7 +1,8 @@
 import * as React from 'react';
 import renderer from 'react-test-renderer';
+import { StaticImage } from 'gatsby-plugin-image';
 
-import Header from '../HEader';
+import Header from '../Header';
 
 describe('Header', () => {
   test('Should render', () => {
@@ -11,6 +12,7 @@ describe('Header', () => {
 
     const { root } = rendered;
     expect(root).toBeDefined();
-    expect(root.findAllByType('img')).toBeDefined();
+    expect(root.findAllByType(StaticImage)).toBeDefined();
+    expect(root.findAllByType('a')).toBeDefined();
   });
 });
