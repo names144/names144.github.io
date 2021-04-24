@@ -4,6 +4,8 @@ import { NavLinkId } from 'constants/index';
 
 import * as styles from './Nav.module.css';
 
+const isBrowser = typeof window !== 'undefined';
+
 const LINKS = [
   { href: `#${NavLinkId.ABOUT}`, text: 'About' },
   { href: `#${NavLinkId.EMPLOYMENT}`, text: 'Employment' },
@@ -24,7 +26,7 @@ const Header: React.FC<Props> = () => (
     {LINKS.map(({ href, text }) => (
       <a
         key={href}
-        className={`${window.location.hash === href ? styles.activeLink : ''}`.trim()} 
+        className={`${isBrowser && window.location.hash === href ? styles.activeLink : ''}`.trim()} 
         href={href}>
         {text}
       </a>

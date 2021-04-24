@@ -15,5 +15,8 @@ describe('NotFoundPage', () => {
     
     const { root } = rendered;
     expect(root.findByType(Seo)).toBeDefined();
+    expect(root.findByType('h1')).toBeDefined();
+    expect(root.findByType('p')).toBeDefined();
+    expect(root.findByType('a')).toBeDefined();
   });
 });

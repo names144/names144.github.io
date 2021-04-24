@@ -6,6 +6,7 @@ import {
   Nav,
   About,
   Employment,
+  Footer,
 } from 'components';
 
 const IndexPage = (): JSX.Element => (
@@ -15,6 +16,7 @@ const IndexPage = (): JSX.Element => (
     <Header />
     <About />
     <Employment />
+    <Footer />
   </>
 );
 

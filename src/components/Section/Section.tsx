@@ -10,7 +10,7 @@ const Section: React.FC<Props> = (props: Props) => (
   <div
     id={props.linkId}
     className={styles.sectionContainer}>
-    <section className="container tw-py-8">
+    <section className="container tw-py-12">
       {props.children}
     </section>
   </div>

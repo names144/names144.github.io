@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply tw-font-sans tw-text-white tw-text-base tw-my-2;
+  @apply tw-font-sans tw-text-white tw-text-base;
   background-color: #343a40;
 }
 
