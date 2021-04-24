@@ -12,6 +12,7 @@
     "noImplicitAny": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "resolveJsonModule": true,
     "plugins": [
       {
         "name": "typescript-plugin-css-modules",

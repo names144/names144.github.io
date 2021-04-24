@@ -12,7 +12,7 @@ describe('Header', () => {
 
     const { root } = rendered;
     expect(root).toBeDefined();
-    expect(root.findAllByType(StaticImage)).toBeDefined();
-    expect(root.findAllByType('a')).toBeDefined();
+    expect(root.findAllByType(StaticImage)).toHaveLength(1);
+    expect(root.findAllByType('a')).toHaveLength(1);
   });
 });

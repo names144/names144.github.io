@@ -4,6 +4,9 @@
  * See: https://www.gatsbyjs.com/docs/browser-apis/
  */
 import * as React from 'react';
+// Polyfill IntersectionObserver API
+import 'intersection-observer';
+
 import './src/styles/global.css';
 
 import { ThemeProvider } from './src/providers';

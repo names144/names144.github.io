@@ -25,6 +25,6 @@ describe('Nav', () => {
     const { root } = rendered;
     expect(root).toBeDefined();
     expect(root.findAllByType('a')).toHaveLength(6);
-    expect(root.findAllByType('a')[1].props.className.split(' ')).toHaveLength(2);
+    expect(root.findAllByType('a')[1].props.className.split(' ')).toHaveLength(1);
   });
 });

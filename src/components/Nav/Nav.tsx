@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { NavLinkId } from 'constants/index';
 
-import * as navStyles from './Nav.module.css';
+import * as styles from './Nav.module.css';
 
 const LINKS = [
   { href: `#${NavLinkId.ABOUT}`, text: 'About' },
@@ -15,21 +15,21 @@ const LINKS = [
 type Props = React.PropsWithoutRef<Record<string, never>>;
 
 const Header: React.FC<Props> = () => (
-  <div className="container tw-flex tw-flex-row tw-text-l tw-items-center">
+  <nav className={`container ${styles.navContainer}`}>
     <a
-      href="#"
-      className="tw-text-white tw-text-xl">
+      href={`#${NavLinkId.HOME}`}
+      className={styles.logoLink}>
       <span className="primary-green-text">N</span>AMES
     </a>
     {LINKS.map(({ href, text }) => (
       <a
         key={href}
-        className={`${navStyles.navLink} ${window.location.hash === href ? navStyles.activeLink : ''}`.trim()} 
+        className={`${window.location.hash === href ? styles.activeLink : ''}`.trim()} 
         href={href}>
         {text}
       </a>
     ))}
-  </div>
+  </nav>
 );
 
 export default Header;

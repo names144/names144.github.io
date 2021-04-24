@@ -1,7 +1,18 @@
-.nav-link {
-  @apply tw-text-gray-400 hover:tw-text-white tw-pl-6;
-}
+.nav-container {
+  @apply tw-px-4 tw-mt-4 tw-flex tw-flex-row tw-items-center;
 
-.active-link {
-  @apply tw-text-white;
+  a {
+    @apply tw-ml-8;
+
+    &.logo-link {
+      @apply tw-text-xl tw-ml-0;
+    }
+
+    &.active-link {
+      &:before {
+        @apply tw-visible tw-bg-white;
+        transform: scaleX(1);
+      }
+    }
+  }
 }

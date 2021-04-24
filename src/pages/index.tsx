@@ -4,15 +4,17 @@ import {
   Seo,
   Header,
   Nav,
+  About,
+  Employment,
 } from 'components';
 
 const IndexPage = (): JSX.Element => (
   <>
     <Seo />
-    <div className="container-fluid">
-      <Nav />
-      <Header />
-    </div>
+    <Nav />
+    <Header />
+    <About />
+    <Employment />
   </>
 );
 
