@@ -1,7 +1,0 @@
-.section-container {
-  @apply tw-px-4;
-  &:nth-child(odd) {
-    @apply tw-text-black;
-    background-color: #fcfcfc;
-  }
-}
