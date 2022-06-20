@@ -1,24 +1,34 @@
 {
   "name": "names144.github.io",
-  "private": true,
-  "description": "Personal website for Nick Ames",
-  "version": "1.0.0",
-  "author": "Nick Ames",
-  "dependencies": {},
-  "devDependencies": {},
+  "packageManager": "yarn@3.2.1",
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "gatsby": "^4.16.0",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "gatsby": "^4.16.0",
+    "gatsby-plugin-emotion": "^7.16.0",
+    "gatsby-plugin-image": "^2.16.1",
+    "gatsby-plugin-manifest": "^4.16.0",
+    "gatsby-plugin-react-helmet": "^5.16.0",
+    "gatsby-plugin-sharp": "^4.16.1",
+    "gatsby-source-filesystem": "^4.16.0",
+    "gatsby-transformer-sharp": "^4.16.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0"
+  },
   "scripts": {
-    "build": "gatsby build",
     "develop": "gatsby develop",
-    "lint:ts": "tsc --noEmit",
-    "lint:eslint": "eslint --ext ts,tsx,js,jsx src/",
-    "lint": "yarn lint:eslint && yarn lint:ts",
-    "start": "yarn develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/names144/names144.github.io"
+    "typecheck": "tsc --noEmit"
   }
 }
