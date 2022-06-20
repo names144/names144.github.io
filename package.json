@@ -5,7 +5,14 @@
     "@types/node": "^18.0.0",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "latest",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "gatsby": "^4.16.0",
+    "prettier": "^2.7.1",
     "typescript": "^4.7.4"
   },
   "dependencies": {
@@ -29,6 +36,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "lint": "eslint --ext .jsx,.js,.tsx,.ts src/",
     "typecheck": "tsc --noEmit"
   }
 }
