@@ -1,14 +1,29 @@
 [
   {
-    "startYear": "2018",
+    "startYear": "2021",
     "endYear": "Present",
+    "title": "Senior Software Development Engineer",
+    "company": "Sequel",
+    "city": "Remote",
+    "state": "United States",
+    "description": "Developing and enhancing web applications for virtual and hybrid events.",
+    "accomplishments": [
+      "Led a team of 2+ engineers to redesign the Sequel administration dashboard, decreasing app load times and improving overall usability through the use of React and NextJS.",
+      "Built a real-time web conferencing component in React, allowing for live streaming to thousands of users, sharing videos, screen sharing, and the ability to manage participants within the conference.",
+      "Performed hiring interviews and collaborated with other engineers to establish a structured interview process.",
+      "Led initiatives to bring test coverage up to 90%, establish CI building and testing, implement coding standards, and institute standard pull-request review processes."
+    ]
+  },
+  {
+    "startYear": "2018",
+    "endYear": "2021",
     "title": "Software Development Engineer",
     "company": "JetClosing",
     "city": "Seattle",
     "state": "WA",
     "description": "Developing and enhancing mobile and web applications for internal and external usage.",
     "accomplishments": [
-      "Re-architected existing JetClosing mobile/web application using React Native and GraphQL increasing performance and enhancing overall user-experience.",
+      "Re-architected the existing JetClosing mobile/web application using React Native and GraphQL increasing performance and improving overall user experience.",
       "Performed hiring interviews and led the software development internship program in a fully remote environment.",
       "Worked alongside architects and product management to design and develop an in-house ticketing web application.",
       "Designed and developed a React/React Native component library utilizing Typescript.",

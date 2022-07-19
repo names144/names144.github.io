@@ -4,7 +4,7 @@ import SectionTitle from "./SectionTitle";
 
 const About = () => {
   return (
-    <VStack id="#about" alignItems="flex-start">
+    <VStack id="#about" alignItems="flex-start" spacing={4}>
       <SectionTitle>About Me</SectionTitle>
       <Text>
         Hello, I&apos;m Nick, a software development engineer living and working
