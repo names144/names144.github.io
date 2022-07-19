@@ -5,6 +5,7 @@ import Nav from "../components/Nav";
 import Header from "../components/Header";
 import About from "../components/About";
 import Employment from "../components/Employment";
+import Education from "../components/Education";
 
 const IndexPage = () => {
   return (
@@ -12,10 +13,11 @@ const IndexPage = () => {
       <Box marginBottom={10}>
         <Nav />
       </Box>
-      <VStack as="main" spacing={10}>
+      <VStack as="main" spacing={10} alignItems="flex-start">
         <Header />
         <About />
         <Employment />
+        <Education />
       </VStack>
     </Container>
   );

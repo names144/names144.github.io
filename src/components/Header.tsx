@@ -4,7 +4,7 @@ import { Box, Text, VStack, Link } from "@chakra-ui/react";
 
 const Header = () => {
   return (
-    <VStack id="#">
+    <VStack id="#" alignItems="center" alignSelf="center">
       <Box sx={{ borderRadius: "100%", overflow: "hidden", maxW: 100 }}>
         <StaticImage src="../images/me.jpeg" alt="Nick Ames" />
       </Box>
