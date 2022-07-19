@@ -1,6 +1,7 @@
 {
   "name": "names144.github.io",
-  "packageManager": "yarn@3.2.1",
+  "version": "0.0.0",
+  "private": true,
   "devDependencies": {
     "@types/node": "^18.0.0",
     "@types/react": "^18.0.14",
@@ -31,12 +32,12 @@
     "react-helmet": "^6.1.0"
   },
   "scripts": {
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "lint": "eslint --ext .jsx,.js,.tsx,.ts src/",
+    "lint": "eslint --ext .jsx,.js,.tsx,.ts src/ && prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
     "typecheck": "tsc --noEmit"
   }
 }
