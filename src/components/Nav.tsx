@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Box, LinkProps, Link, useTheme, HStack } from "@chakra-ui/react";
 
 const NAV_LINKS = [
@@ -22,9 +22,16 @@ const NavLink = ({ sx = {}, active, ...rest }: NavLinkProps) => {
   );
 };
 
+const isBrowser = () => typeof window !== "undefined";
+
 const Nav = () => {
-  const [activeNav, setActiveNav] = useState(window.location.hash ?? "#");
+  const [activeNav, setActiveNav] = useState("#");
   const theme = useTheme();
+
+  useEffect(() => {
+    if (isBrowser()) setActiveNav(window.location.hash ?? "#");
+  }, []);
+
   return (
     <HStack as="nav" spacing={8}>
       <NavLink href="#" onClick={() => setActiveNav("#")}>

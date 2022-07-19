@@ -26,7 +26,7 @@ const History = (history: EducationHistory) => {
 
 const Education = () => {
   return (
-    <VStack id="#education" alignItems="flex-start" spacing={4}>
+    <VStack id="education" alignItems="flex-start" spacing={4}>
       <SectionTitle>Education</SectionTitle>
       {(educationHistory as EducationHistory[]).map((education) => (
         <History

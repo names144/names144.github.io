@@ -42,7 +42,7 @@ const Job = (history: EmploymentHistory) => {
 
 const Employment = () => {
   return (
-    <VStack id="#employment" alignItems="flex-start" spacing={4}>
+    <VStack id="employment" alignItems="flex-start" spacing={4}>
       <SectionTitle>Employment</SectionTitle>
       {(employmentHistory as EmploymentHistory[]).map((employment) => (
         <Job
