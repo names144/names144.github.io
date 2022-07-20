@@ -1,7 +1,6 @@
 import React from "react";
-import { Box, Container, VStack } from "@chakra-ui/react";
+import { Container, VStack } from "@chakra-ui/react";
 
-import Nav from "../components/Nav";
 import Header from "../components/Header";
 import About from "../components/About";
 import Employment from "../components/Employment";
@@ -9,10 +8,7 @@ import Education from "../components/Education";
 
 const IndexPage = () => {
   return (
-    <Container py={4}>
-      <Box marginBottom={10}>
-        <Nav />
-      </Box>
+    <Container py={4} position="relative" maxW="container.md">
       <VStack as="main" spacing={10} alignItems="flex-start">
         <Header />
         <About />

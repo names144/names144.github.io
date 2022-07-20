@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, VStack } from "@chakra-ui/react";
+import { HStack, Text, VStack } from "@chakra-ui/react";
 
 import SectionTitle from "./SectionTitle";
 
@@ -28,12 +28,14 @@ const Education = () => {
   return (
     <VStack id="education" alignItems="flex-start" spacing={4}>
       <SectionTitle>Education</SectionTitle>
-      {(educationHistory as EducationHistory[]).map((education) => (
-        <History
-          key={`${education.school}-${education.major}-${education.endYear}`}
-          {...education}
-        />
-      ))}
+      <HStack spacing={4}>
+        {(educationHistory as EducationHistory[]).map((education) => (
+          <History
+            key={`${education.school}-${education.major}-${education.endYear}`}
+            {...education}
+          />
+        ))}
+      </HStack>
     </VStack>
   );
 };
