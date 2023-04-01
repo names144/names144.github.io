@@ -2,7 +2,7 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Box, Text, VStack, Link } from "@chakra-ui/react";
 
-const Header = () => {
+export function Header() {
   return (
     <VStack id="header" alignItems="center" alignSelf="center">
       <Box sx={{ borderRadius: "100%", overflow: "hidden", maxW: 100 }}>
@@ -17,6 +17,4 @@ const Header = () => {
       </Link>
     </VStack>
   );
-};
-
-export default Header;
+}

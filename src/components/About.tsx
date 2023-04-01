@@ -1,8 +1,8 @@
 import React from "react";
 import { Text, VStack } from "@chakra-ui/react";
-import SectionTitle from "./SectionTitle";
+import { SectionTitle } from "./SectionTitle";
 
-const About = () => {
+export function About() {
   return (
     <VStack id="about" alignItems="flex-start" spacing={4}>
       <SectionTitle>About Me</SectionTitle>
@@ -14,6 +14,4 @@ const About = () => {
       </Text>
     </VStack>
   );
-};
-
-export default About;
+}

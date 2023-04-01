@@ -2,7 +2,16 @@ import * as React from "react";
 import { Link as GatsbyLink } from "gatsby";
 import { Container, VStack, Link, Text } from "@chakra-ui/react";
 
-const NotFoundPage = () => {
+export function Head() {
+  return (
+    <>
+      <meta name="description" content="Resume site for Nicholas Ames" />
+      <title>Nicholas Ames | 404</title>
+    </>
+  );
+}
+
+export default function NotFoundPage() {
   return (
     <Container as="main" py={4}>
       <VStack>
@@ -22,6 +31,4 @@ const NotFoundPage = () => {
       </VStack>
     </Container>
   );
-};
-
-export default NotFoundPage;
+}

@@ -1,12 +1,21 @@
 import React from "react";
 import { Container, VStack } from "@chakra-ui/react";
 
-import Header from "../components/Header";
-import About from "../components/About";
-import Employment from "../components/Employment";
-import Education from "../components/Education";
+import { Header } from "../components/Header";
+import { About } from "../components/About";
+import { Employment } from "../components/Employment";
+import { Education } from "../components/Education";
 
-const IndexPage = () => {
+export function Head() {
+  return (
+    <>
+      <meta name="description" content="Resume site for Nicholas Ames" />
+      <title>Nicholas Ames</title>
+    </>
+  );
+}
+
+export default function IndexPage() {
   return (
     <Container py={4} position="relative" maxW="container.md">
       <VStack as="main" spacing={10} alignItems="flex-start">
@@ -17,6 +26,4 @@ const IndexPage = () => {
       </VStack>
     </Container>
   );
-};
-
-export default IndexPage;
+}

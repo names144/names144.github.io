@@ -18,4 +18,6 @@ const theme = {
   },
 };
 
+export const baseTheme = {};
+
 export default extendTheme(theme);

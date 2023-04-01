@@ -1,22 +1,11 @@
-import React from "react";
+import React, { memo } from "react";
 import { ListItem, Text, UnorderedList, VStack } from "@chakra-ui/react";
 
-import SectionTitle from "./SectionTitle";
+import { SectionTitle } from "./SectionTitle";
 
-import employmentHistory from "../employment.json";
+import { EMPLOYMENT, EmploymentHistory } from "../constants/employment";
 
-interface EmploymentHistory {
-  startYear: string;
-  endYear: string;
-  title: string;
-  company: string;
-  city: string;
-  state: string;
-  description: string;
-  accomplishments: string[];
-}
-
-const Job = (history: EmploymentHistory) => {
+const Job = memo(function Job(history: EmploymentHistory) {
   return (
     <VStack alignItems="flex-start">
       <Text fontSize="xl">
@@ -38,13 +27,13 @@ const Job = (history: EmploymentHistory) => {
       )}
     </VStack>
   );
-};
+});
 
-const Employment = () => {
+export function Employment() {
   return (
     <VStack id="employment" alignItems="flex-start" spacing={4}>
       <SectionTitle>Employment</SectionTitle>
-      {(employmentHistory as EmploymentHistory[]).map((employment) => (
+      {EMPLOYMENT.map((employment) => (
         <Job
           key={`${employment.title}-${employment.company}-${employment.endYear}`}
           {...employment}
@@ -52,6 +41,4 @@ const Employment = () => {
       ))}
     </VStack>
   );
-};
-
-export default Employment;
+}
