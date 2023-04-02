@@ -6,6 +6,5 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll": true
-  },
-  "typescript.tsserver.pluginPaths": ["typescript-plugin-css-modules"]
+  }
 }
