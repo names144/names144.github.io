@@ -11,10 +11,10 @@ export interface EmploymentHistory {
 
 export const EMPLOYMENT: EmploymentHistory[] = [
   {
-    startYear: "2022",
+    startYear: "2023",
     endYear: "Present",
-    title: "Principal Software Engineer / Team Lead",
-    company: "Sequel",
+    title: "Staff Software Engineer",
+    company: "Q Bio",
     city: "Remote",
     state: "United States",
     description: "",
@@ -22,8 +22,8 @@ export const EMPLOYMENT: EmploymentHistory[] = [
   },
   {
     startYear: "2021",
-    endYear: "2022",
-    title: "Senior Software Development Engineer",
+    endYear: "2023",
+    title: "Principal Software Engineer / Team Lead",
     company: "Sequel",
     city: "Remote",
     state: "United States",

@@ -6,21 +6,22 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "forwardPorts": [8000],
+  "forwardPorts": [3000],
   "portsAttributes": {
-    "8000": {
+    "3000": {
       "label": "Application",
       "onAutoForward": "notify",
       "protocol": "http"
     }
   },
   // Need to manually build parcel watcher and sharp for some reason..
-  "postCreateCommand": "bash -i -c 'nvm install' && npm install && npm rebuild --verbose sharp && cd ./node_modules/@parcel/watcher && npm install && npm run prebuild --openssl_fips=''",
+  "postCreateCommand": "bash -i -c 'nvm install' && npm install && npm run astro sync",
   "customizations": {
     "vscode": {
       "extensions": [
         "streetsidesoftware.code-spell-checker",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "astro-build.astro-vscode"
       ]
     }
   }

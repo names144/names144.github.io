@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Link from "../components/Link.astro";
+---
+
+<BaseLayout title="Not Found" description="404 Error — this page was not found">
+  <div class="flex flex-col justify-center items-center text-center">
+    <h1 class="text-3xl mb-4">404 Error</h1>
+    <p>
+      This page was not found. <Link href="/">Take me back home!</Link>
+    </p>
+  </div>
+</BaseLayout>

@@ -1,0 +1,57 @@
+---
+import { EMPLOYMENT } from "../constants/employment";
+import { EDUCATION } from "../constants/education";
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import List from "../components/List.astro";
+import ListItem from "../components/ListItem.astro";
+import Header from "../components/Header.astro";
+---
+
+<BaseLayout title="Home">
+  <div class="flex flex-col gap-12">
+    <Header />
+    <main class="flex flex-col gap-12">
+      <Section title="About Me">
+        <p>
+          Hello, I'm Nick, a software development engineer living and working in
+          the Pacific Northwest. I enjoy creating web applications, finding
+          creative ways to parse the internet and learning new tools and
+          technologies to help aid me in my day-to-day tasks.
+        </p>
+      </Section>
+      <Section title="Employment">
+        <List>
+          {
+            EMPLOYMENT.map(
+              ({ title, company, startYear, endYear, description }) => (
+                <ListItem>
+                  <h3 class="text-lg mb-1">{title}</h3>
+                  <p class="text-sm mb-1">
+                    {company}, {startYear} - {endYear}
+                  </p>
+                  <p>{description}</p>
+                </ListItem>
+              ),
+            )
+          }
+        </List>
+      </Section>
+      <Section title="Education">
+        <List>
+          {
+            EDUCATION.map(({ school, major, startYear, endYear }) => (
+              <ListItem>
+                <h3 class="text-lg mb-1">{school}</h3>
+                <p>
+                  {major}, {startYear} - {endYear}
+                </p>
+              </ListItem>
+            ))
+          }
+        </List>
+      </Section>
+    </main>
+  </div>
+</BaseLayout>

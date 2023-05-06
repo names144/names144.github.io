@@ -1,0 +1,75 @@
+---
+import { Picture } from "@astrojs/image/components";
+
+import SocialIcon from "./SocialIcon.astro";
+
+const IMG_SIZE_PX = "208px";
+const IMG_SIZE_SMALL_PX = "158px";
+---
+
+<style define:vars={{ imgSize: IMG_SIZE_PX, imgSizeSmall: IMG_SIZE_SMALL_PX }}>
+  img {
+    min-width: var(--imgSizeSmall);
+    min-height: var(--imgSizeSmall);
+    width: var(--imgSizeSmall);
+    height: var(--imgSizeSmall);
+    border: 4px solid transparent;
+    background: linear-gradient(theme(colors.white), theme(colors.white))
+        padding-box,
+      linear-gradient(to top, theme(colors.emerald.950), theme(colors.blue.300))
+        border-box;
+
+    @media screen(sm) {
+      min-width: var(--imgSize);
+      min-height: var(--imgSize);
+      width: var(--imgSize);
+      height: var(--imgSize);
+    }
+  }
+
+  .social {
+    --r: calc(var(--imgSizeSmall) / 2);
+    --theta: 0deg;
+    --x: calc(var(--r) * sin(var(--theta)));
+    --y: calc(var(--r) * cos(var(--theta)));
+    transform: translate(var(--x), var(--y));
+    position: absolute;
+    top: calc(50% - 1rem);
+    left: calc(50% - 1rem);
+    width: 2rem;
+    height: 2rem;
+
+    @media screen(sm) {
+      --r: calc(var(--imgSize) / 2);
+    }
+
+    &:nth-of-type(1) {
+      --theta: 60deg;
+    }
+
+    &:nth-of-type(2) {
+      --theta: 30deg;
+    }
+  }
+</style>
+<header>
+  <div
+    class="flex flex-wrap-reverse sm:flex-nowrap flex-1 gap-8 sm:gap-12 justify-center sm:justify-between items-center"
+  >
+    <h1 class="text-3xl text-center sm:text-left">
+      I'm Nicholas Ames, a Software Engineer
+    </h1>
+    <div class="flex flex-col align-center gap-2 relative">
+      <Picture
+        sizes={`(max-width: 600px) 150px, 400px`}
+        widths={[150, 400]}
+        aspectRatio="1:1"
+        class="rounded-full h-200"
+        src="/images/me.jpg"
+        alt="Nicholas Ames"
+      />
+      <SocialIcon class="social" social="linkedin" />
+      <SocialIcon class="social" social="github" />
+    </div>
+  </div>
+</header>

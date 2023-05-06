@@ -1,0 +1,29 @@
+---
+interface Props {
+  title?: string | undefined;
+  description?: string | undefined;
+}
+
+const { title, description = "A resume site for Nicholas Ames" } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self'; object-src 'none';"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>Nicholas Ames{title ? ` | ${title}` : ""}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body
+    class="bg-white dark:bg-slate-950 text-slate-950 dark:text-white font-mono"
+  >
+    <div class="my-0 mx-auto p-8 max-w-screen-lg flex flex-col">
+      <slot />
+    </div>
+  </body>
+</html>
