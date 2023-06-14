@@ -73,11 +73,10 @@ jobs:
       - name: Install Dependencies
         if: steps.cache-nodemodules.outputs.cache-hit != 'true'
         run: pnpm install
-      - name: Install, build, and upload your site
-        uses: withastro/action@v0
-        with:
-          node-version: 20
-      - uses: actions/upload-pages-artifact@v1
+      - name: Build the project
+        run: pnpm run build
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v1
         with:
           path: "./dist/"
 
