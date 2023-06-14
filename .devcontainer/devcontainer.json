@@ -15,7 +15,7 @@
     }
   },
   // Need to manually build parcel watcher and sharp for some reason..
-  "postCreateCommand": "bash -i -c 'nvm install' && npm install && npm run astro sync",
+  "postCreateCommand": "bash -i -c 'nvm install' && pnpm install && pnpm run astro sync",
   "customizations": {
     "vscode": {
       "extensions": [

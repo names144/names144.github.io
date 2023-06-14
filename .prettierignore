@@ -1,3 +1,4 @@
 gatsby-types.d.ts
 .astro
 dist
+.pnpm-store
