@@ -14,8 +14,8 @@
       "protocol": "http"
     }
   },
-  // Need to manually build parcel watcher and sharp for some reason..
-  "postCreateCommand": "bash -i -c 'nvm install' && pnpm install && pnpm run astro sync",
+  "onCreateCommand": "pnpm install && pnpm run astro sync",
+  "postCreateCommand": "pnpm dev",
   "customizations": {
     "vscode": {
       "extensions": [
