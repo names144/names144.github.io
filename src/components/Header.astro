@@ -1,7 +1,8 @@
 ---
-import { Picture } from "@astrojs/image/components";
-
+import { Picture } from "astro:assets";
 import SocialIcon from "./SocialIcon.astro";
+
+import headerImage from "../assets/me.jpg";
 
 const IMG_SIZE_PX = "208px";
 const IMG_SIZE_SMALL_PX = "158px";
@@ -63,9 +64,8 @@ const IMG_SIZE_SMALL_PX = "158px";
       <Picture
         sizes={`(max-width: 600px) 150px, 400px`}
         widths={[150, 400]}
-        aspectRatio="1:1"
         class="rounded-full h-200"
-        src="/images/me.jpg"
+        src={headerImage}
         alt="Nicholas Ames"
       />
       <SocialIcon class="social" social="linkedin" />

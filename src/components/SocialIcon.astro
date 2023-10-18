@@ -21,7 +21,7 @@ const SOCIAL_META = {
   },
 };
 
-const { social, class: className } = Astro.props;
+const { social, class: className, ...rest } = Astro.props;
 const { icon, href, title } = SOCIAL_META[social];
 ---
 
@@ -89,6 +89,7 @@ const { icon, href, title } = SOCIAL_META[social];
   href={href}
   target="_blank"
   rel="noopener noreferrer"
+  {...rest}
 >
   <Icon aria-hidden="true" focusable="false" name={icon} />
   <span class="sr-only">{title}</span>
