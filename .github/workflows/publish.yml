@@ -13,70 +13,25 @@ permissions:
   id-token: write
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-          cache: "pnpm"
-      - name: Cache Node Modules
-        id: cache-nodemodules
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
-      - name: Install Dependencies
-        if: steps.cache-nodemodules.outputs.cache-hit != 'true'
-        run: pnpm install
-      - name: Lint and Typecheck
-        run: pnpm run lint && pnpm run typecheck
-
   build:
     runs-on: ubuntu-latest
-    needs: lint
     steps:
       - name: Checkout your repository using git
-        uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
+        uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: latest
           cache: "pnpm"
-      - name: Cache Node Modules
-        id: cache-nodemodules
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
       - name: Install Dependencies
-        if: steps.cache-nodemodules.outputs.cache-hit != 'true'
         run: pnpm install
-      - name: Build the project
+      - name: Lint
+        run: pnpm run lint && pnpm run typecheck
+      - name: Build
         run: pnpm run build
       - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: "./dist/"
 
@@ -89,4 +44,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
