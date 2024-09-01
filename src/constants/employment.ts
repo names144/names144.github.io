@@ -13,7 +13,7 @@ export const EMPLOYMENT: EmploymentHistory[] = [
   {
     startYear: "2023",
     endYear: "Present",
-    title: "Staff Software Engineer",
+    title: "Staff Software Engineer / Team Lead",
     company: "Q Bio",
     city: "Remote",
     state: "United States",
