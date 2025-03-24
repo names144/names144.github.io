@@ -13,22 +13,28 @@ export const EMPLOYMENT: EmploymentHistory[] = [
   {
     startYear: "2023",
     endYear: "Present",
-    title: "Staff Software Engineer / Team Lead",
+    title: "Staff Software Engineer, Technical Lead",
     company: "Q Bio",
     city: "Remote",
     state: "United States",
-    description: "",
-    accomplishments: [],
+    description:
+      "Engineered and optimized web applications for a comprehensive health and wellness platform, empowering users and clinicians with unified, data-driven health dashboards.",
+    accomplishments: [
+      "Led the technical strategy and development for key frontend applications and infrastructure, ensuring scalability and maintainability.",
+      "Drove the adoption of feature flagging across the engineering team, resulting in a 15% reduction in deployment-related incidents.",
+      "Architected and deployed a user-facing feature enabling seamless integration of wearable health trackers, enriching user dashboards with personalized health data.",
+      "Developed and maintained a suite of internal developer tools, streamlining workflows and boosting team productivity.",
+    ],
   },
   {
     startYear: "2021",
     endYear: "2023",
-    title: "Principal Software Engineer / Team Lead",
+    title: "Principal Software Engineer, Technical Lead",
     company: "Sequel",
     city: "Remote",
     state: "United States",
     description:
-      "Developing and enhancing web applications for virtual and hybrid events.",
+      "Engineered and scaled customizable web conferencing components, enabling seamless integration and brand personalization for virtual and hybrid event platforms.",
     accomplishments: [
       "Led a team of 2+ engineers to redesign the Sequel administration dashboard, decreasing app load times and improving overall usability through the use of React and NextJS.",
       "Built a real-time web conferencing component in React, allowing for live streaming to thousands of users, sharing videos, screen sharing, and the ability to manage participants within the conference.",
@@ -44,7 +50,7 @@ export const EMPLOYMENT: EmploymentHistory[] = [
     city: "Seattle",
     state: "WA",
     description:
-      "Developing and enhancing mobile and web applications for internal and external usage.",
+      "Developed and optimized mobile and web applications, providing real estate agents and clients with comprehensive transaction visibility, streamlining the title and escrow process.",
     accomplishments: [
       "Re-architected the existing JetClosing mobile/web application using React Native and GraphQL increasing performance and improving overall user experience.",
       "Performed hiring interviews and led the software development internship program in a fully remote environment.",
@@ -61,7 +67,7 @@ export const EMPLOYMENT: EmploymentHistory[] = [
     city: "Seattle",
     state: "WA",
     description:
-      "Developing a cloud platform that will allow for multi-tier/multi-tenant management of tenants and licensed products.",
+      "Developed and implemented a multi-tier cloud platform, transitioning an on-premises application to provide customers with a centralized view of log data and metrics across all devices.",
     accomplishments: [
       "Building unified applications in Angular for allowing users to view, manage, and interact with various WatchGuard applications.",
       "Built a complete calendar component using Angular that allows users to choose both dates and times, utilizing MomentJS.",

@@ -41,12 +41,10 @@ import Header from "../components/Header.astro";
       <Section title="Education">
         <List>
           {
-            EDUCATION.map(({ school, major, startYear, endYear }) => (
+            EDUCATION.map(({ school, major }) => (
               <ListItem>
                 <h3 class="text-lg mb-1">{school}</h3>
-                <p>
-                  {major}, {startYear} - {endYear}
-                </p>
+                <p>{major}</p>
               </ListItem>
             ))
           }

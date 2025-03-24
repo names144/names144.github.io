@@ -14,4 +14,4 @@ FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:${VARIANT}
 # RUN su node -c "npm install -g <your-package-list -here>"
 
 # Install global packages
-RUN su node -c "npm install -g pnpm@9"
+RUN su node -c "npm install -g pnpm@10"
