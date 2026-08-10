@@ -10,6 +10,6 @@ export const EDUCATION: EducationHistory[] = [
   },
   {
     school: "Seattle University",
-    major: "BSc, Sports and Exercise Science",
+    major: "BSc, Sport and Exercise Science",
   },
 ];

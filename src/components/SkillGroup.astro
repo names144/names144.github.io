@@ -1,0 +1,22 @@
+---
+import type { SkillGroup } from "../constants/skills";
+
+const { category, items } = Astro.props as SkillGroup;
+---
+
+<div class="flex flex-col gap-2.5">
+  <h3
+    class="font-mono text-xs tracking-[0.15em] uppercase text-muted-light dark:text-muted-dark"
+  >
+    {category}
+  </h3>
+  <ul class="flex flex-wrap gap-2">
+    {
+      items.map((item) => (
+        <li class="rounded-full border border-line-light dark:border-line-dark px-3 py-1 font-mono text-xs sm:text-sm">
+          {item}
+        </li>
+      ))
+    }
+  </ul>
+</div>

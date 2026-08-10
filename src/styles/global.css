@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+@import "@fontsource/ibm-plex-mono/600.css";
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-sans/600.css";
+
+@theme {
+  --color-ink: #14161c;
+  --color-ink-raised: #1b1e27;
+  --color-paper: #f5f3ee;
+  --color-paper-raised: #ece7d9;
+  --color-accent: #4cae7d;
+  --color-accent-deep: #2e7d4f;
+  --color-muted-dark: #9ba3b4;
+  --color-muted-light: #6b655a;
+  --color-line-dark: #2a2d37;
+  --color-line-light: #ddd6c4;
+
+  --font-display: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+}
+
+@layer base {
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-ink);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-rise-in {
+  animation: rise-in 0.6s ease-out both;
+}

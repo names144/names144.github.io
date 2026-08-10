@@ -1,5 +1,6 @@
 ---
 import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 
 interface Props {
   title?: string | undefined;
@@ -17,14 +18,16 @@ const { title, description = "A resume site for Nicholas Ames" } = Astro.props;
       content="script-src 'self'; object-src 'none';"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#14161c" />
     <title>Nicholas Ames{title ? ` | ${title}` : ""}</title>
     <meta name="description" content={description} />
   </head>
   <body
-    class="bg-white dark:bg-slate-950 text-slate-950 dark:text-white font-mono"
+    class="bg-paper text-ink dark:bg-ink dark:text-paper font-body antialiased flex flex-col min-h-screen"
   >
-    <div class="my-0 mx-auto p-8 max-w-screen-lg flex flex-col">
+    <div
+      class="my-0 mx-auto px-6 py-16 sm:px-8 max-w-3xl flex flex-col flex-1 w-full"
+    >
       <slot />
     </div>
     <Footer />

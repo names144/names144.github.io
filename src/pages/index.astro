@@ -1,54 +1,61 @@
 ---
 import { EMPLOYMENT } from "../constants/employment";
 import { EDUCATION } from "../constants/education";
+import { SKILLS } from "../constants/skills";
 
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Section from "../components/Section.astro";
 import List from "../components/List.astro";
 import ListItem from "../components/ListItem.astro";
 import Header from "../components/Header.astro";
+import EmploymentEntry from "../components/EmploymentEntry.astro";
+import SkillGroup from "../components/SkillGroup.astro";
 ---
 
 <BaseLayout title="Home">
-  <div class="flex flex-col gap-12">
-    <Header />
-    <main class="flex flex-col gap-12">
-      <Section title="About Me">
-        <p>
-          Hello, I'm Nick, a software development engineer living and working in
-          the Pacific Northwest. I enjoy creating web applications, finding
-          creative ways to parse the internet and learning new tools and
-          technologies to help aid me in my day-to-day tasks.
-        </p>
-      </Section>
+  <div class="flex flex-col gap-16">
+    <Header>
+      Staff engineer with 10+ years shipping user-facing web and mobile products
+      end to end. Track record of taking features from ambiguous problems to
+      shipped surfaces, and of finding and fixing the performance work that
+      makes those surfaces usable at scale. Works comfortably across the stack
+      in TypeScript and Python, and builds the tooling and agent-assisted
+      workflows that let teams ship faster with fewer defects.
+    </Header>
+    <main class="flex flex-col gap-16">
       <Section title="Employment">
-        <List>
+        <ul
+          class="flex flex-col divide-y divide-line-light dark:divide-line-dark"
+        >
           {
-            EMPLOYMENT.map(
-              ({ title, company, startYear, endYear, description }) => (
-                <ListItem>
-                  <h3 class="text-lg mb-1">{title}</h3>
-                  <p class="text-sm mb-1">
-                    {company}, {startYear} - {endYear}
-                  </p>
-                  <p>{description}</p>
-                </ListItem>
-              ),
-            )
+            EMPLOYMENT.map((job, index) => (
+              <EmploymentEntry {...job} version={EMPLOYMENT.length - index} />
+            ))
           }
-        </List>
+        </ul>
       </Section>
       <Section title="Education">
         <List>
           {
             EDUCATION.map(({ school, major }) => (
               <ListItem>
-                <h3 class="text-lg mb-1">{school}</h3>
-                <p>{major}</p>
+                <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                  <h3 class="font-display text-base sm:text-lg font-medium">
+                    {school}
+                  </h3>
+                  <p class="font-mono text-sm text-muted-light dark:text-muted-dark">
+                    {major}
+                  </p>
+                </div>
               </ListItem>
             ))
           }
         </List>
+      </Section>
+      <Section title="Skills">
+        <div class="flex flex-col gap-6">
+          {SKILLS.map((group) => <SkillGroup {...group} />)}
+        </div>
       </Section>
     </main>
   </div>

@@ -1,75 +1,64 @@
 ---
 import { Picture } from "astro:assets";
+import { Icon } from "astro-icon/components";
 import SocialIcon from "./SocialIcon.astro";
 
 import headerImage from "../assets/me.jpg";
-
-const IMG_SIZE_PX = "208px";
-const IMG_SIZE_SMALL_PX = "158px";
 ---
 
-<style define:vars={{ imgSize: IMG_SIZE_PX, imgSizeSmall: IMG_SIZE_SMALL_PX }}>
-  img {
-    min-width: var(--imgSizeSmall);
-    min-height: var(--imgSizeSmall);
-    width: var(--imgSizeSmall);
-    height: var(--imgSizeSmall);
-    border: 4px solid transparent;
-    background:
-      linear-gradient(theme(colors.white), theme(colors.white)) padding-box,
-      linear-gradient(to top, theme(colors.emerald.950), theme(colors.blue.300))
-        border-box;
-
-    @media screen(sm) {
-      min-width: var(--imgSize);
-      min-height: var(--imgSize);
-      width: var(--imgSize);
-      height: var(--imgSize);
-    }
-  }
-
-  .social {
-    --r: calc(var(--imgSizeSmall) / 2);
-    --theta: 0deg;
-    --x: calc(var(--r) * sin(var(--theta)));
-    --y: calc(var(--r) * cos(var(--theta)));
-    transform: translate(var(--x), var(--y));
-    position: absolute;
-    top: calc(50% - 1rem);
-    left: calc(50% - 1rem);
-    width: 2rem;
-    height: 2rem;
-
-    @media screen(sm) {
-      --r: calc(var(--imgSize) / 2);
-    }
-
-    &:nth-of-type(1) {
-      --theta: 60deg;
-    }
-
-    &:nth-of-type(2) {
-      --theta: 30deg;
-    }
-  }
-</style>
-<header>
+<header
+  class="flex flex-col-reverse sm:flex-row gap-8 sm:gap-12 sm:items-start"
+>
+  <div class="flex flex-col gap-5 animate-rise-in">
+    <div class="flex flex-col gap-2">
+      <p
+        class="font-mono text-xs sm:text-sm tracking-[0.2em] uppercase text-accent-deep dark:text-accent"
+      >
+        Staff Software Engineer
+      </p>
+      <h1
+        class="font-display text-4xl sm:text-5xl font-medium tracking-tight text-balance"
+      >
+        Nicholas Ames
+      </h1>
+      <p
+        class="flex items-center gap-1.5 font-mono text-sm text-muted-light dark:text-muted-dark"
+      >
+        <Icon
+          name="ri:map-pin-line"
+          class="w-4 h-4 shrink-0"
+          aria-hidden="true"
+        />
+        Seattle, WA
+      </p>
+    </div>
+    <p
+      class="text-base sm:text-lg leading-relaxed text-muted-light dark:text-muted-dark max-w-prose"
+    >
+      <slot />
+    </p>
+    <div class="flex flex-wrap gap-3 pt-1">
+      <SocialIcon social="linkedin" />
+      <SocialIcon social="github" />
+    </div>
+  </div>
   <div
-    class="flex flex-wrap-reverse sm:flex-nowrap flex-1 gap-8 sm:gap-12 justify-center sm:justify-between items-center"
+    class="shrink-0 mx-auto sm:mx-0 animate-rise-in"
+    style="animation-delay: 0.12s"
   >
-    <h1 class="text-3xl text-center sm:text-left">
-      I'm Nicholas Ames, a Software Engineer
-    </h1>
-    <div class="flex flex-col align-center gap-2 relative">
+    <div class="relative w-32 h-32 sm:w-40 sm:h-40">
+      <div
+        class="absolute -inset-1 rounded-full bg-linear-to-br from-accent to-transparent opacity-70"
+        aria-hidden="true"
+      >
+      </div>
       <Picture
-        sizes={`(max-width: 600px) 150px, 400px`}
-        widths={[150, 400]}
-        class="rounded-full h-200"
+        sizes="(max-width: 640px) 128px, 160px"
+        widths={[128, 160, 320]}
+        class="relative rounded-full w-32 h-32 sm:w-40 sm:h-40 object-cover border-2 border-paper dark:border-ink"
         src={headerImage}
         alt="Nicholas Ames"
       />
-      <SocialIcon class="social" social="linkedin" />
-      <SocialIcon class="social" social="github" />
     </div>
   </div>
 </header>

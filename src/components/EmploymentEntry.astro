@@ -1,0 +1,56 @@
+---
+import type { EmploymentHistory } from "../constants/employment";
+
+interface Props extends EmploymentHistory {
+  version: number;
+}
+
+const {
+  version,
+  startDate,
+  endDate,
+  title,
+  company,
+  city,
+  state,
+  accomplishments,
+} = Astro.props;
+---
+
+<li class="flex flex-col gap-3 py-8 first:pt-0 last:pb-0">
+  <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+    <span
+      class="font-mono text-xs rounded-sm border border-accent-deep/40 dark:border-accent/30 text-accent-deep dark:text-accent px-1.5 py-0.5"
+    >
+      v{version}.0.0
+    </span>
+    <span class="font-mono text-xs text-muted-light dark:text-muted-dark">
+      {startDate} — {endDate}
+    </span>
+  </div>
+  <div class="flex flex-col gap-0.5">
+    <h3 class="font-display text-lg sm:text-xl font-medium text-balance">
+      {title}
+    </h3>
+    <p class="text-sm text-muted-light dark:text-muted-dark">
+      {company} · {city}, {state}
+    </p>
+  </div>
+  {
+    accomplishments.length > 0 && (
+      <ul class="flex flex-col gap-1.5 mt-1">
+        {accomplishments.map((item) => (
+          <li class="flex gap-2.5 font-mono text-sm leading-relaxed">
+            <span
+              class="text-accent-deep dark:text-accent select-none"
+              aria-hidden="true"
+            >
+              +
+            </span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</li>
